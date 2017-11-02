@@ -1,22 +1,13 @@
-sudo: true
-dist: trusty
-cache: false
+# sudo: true
+# dist: trusty
+# cache: false
 
 script:
-#- travis_wait 15 'sfdx force:package2:version:create -d force-app -w 1000 --json -v HubOrg > package_version.json'
-#- sfdx force:package2:version:create -d force-app -w 20 -p
-#- PACKAGEVERSIONID=$(cat package_version.json | jq -r .result.Package2VersionId)
-#- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def-noshape.json -a packageorg
-#- sfdx force:lightning:test:install
-#- travis_wait 15 sfdx force:package:install -p 14 -i $PACKAGEVERSIONID -u packageorg
-#- sfdx force:apex:test:run -u packageorg -c -r human
-#- sfdx force:lightning:test:run -a jasmineTests.app
 
 - ./script.sh hello world >> output.txt
 - OUTPUT=$(cat output.txt)
 - echo $OUTPUT
 - travis_wait 30 ./script.sh hello wait >> wait.txt
-
 
 after_script:
 
