@@ -15,5 +15,5 @@ script:
 #- sfdx force:apex:test:run -u packageorg -c -r human
 #- sfdx force:lightning:test:run -a jasmineTests.app
 
-- OUTPUT=./script.sh $INPUT1 $INPUT2
-- echo $OUTPUT
+- ./script.sh $INPUT1 $INPUT2
+- echo $?
