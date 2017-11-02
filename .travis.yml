@@ -2,8 +2,6 @@ sudo: true
 dist: trusty
 cache: false
 
-install: travis_wait mvn install
-
 script:
 #- travis_wait 15 'sfdx force:package2:version:create -d force-app -w 1000 --json -v HubOrg > package_version.json'
 #- sfdx force:package2:version:create -d force-app -w 20 -p
@@ -17,6 +15,10 @@ script:
 - ./script.sh hello world >> output.txt
 - OUTPUT=$(cat output.txt)
 - echo $OUTPUT
-- travis_wait ./script.sh hello wait >> wait.txt
+- travis_wait 30 ./script.sh hello wait >> wait.txt
+
+
+after_script:
+
 - WAIT=$(cat wait.txt)
 - echo $wait
