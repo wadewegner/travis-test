@@ -3,7 +3,8 @@ dist: trusty
 cache: false
 env:
   matrix:
-  - TEST1=hello
+  - INPUT1=hello
+  - INPUT2=world
 script:
 #- travis_wait 15 'sfdx force:package2:version:create -d force-app -w 1000 --json -v HubOrg > package_version.json'
 #- sfdx force:package2:version:create -d force-app -w 20 -p
@@ -14,5 +15,5 @@ script:
 #- sfdx force:apex:test:run -u packageorg -c -r human
 #- sfdx force:lightning:test:run -a jasmineTests.app
 
-- COUNT=./script.sh
-- echo $COUNT
+- OUTPUT=./script.sh $INPUT1 $INPUT2
+- echo $OUTPUT
