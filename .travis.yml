@@ -11,5 +11,6 @@ script:
 #- sfdx force:apex:test:run -u packageorg -c -r human
 #- sfdx force:lightning:test:run -a jasmineTests.app
 
-- ./script.sh hello world
-- echo $1
+- ./script.sh hello world >> output.txt
+- OUTPUT=$(cat output.txt)
+- echo $OUTPUT
