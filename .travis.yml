@@ -2,7 +2,6 @@ sudo: true
 dist: trusty
 cache: false
 env:
-  matrix:
   - INPUT1=hello
   - INPUT2=world
 script:
