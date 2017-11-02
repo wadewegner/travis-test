@@ -13,7 +13,6 @@ script:
 #- travis_wait 15 sfdx force:package:install -p 14 -i $PACKAGEVERSIONID -u packageorg
 #- sfdx force:apex:test:run -u packageorg -c -r human
 #- sfdx force:lightning:test:run -a jasmineTests.app
-#- sfdx force:org:delete -u packageorg -p
 
 - COUNT="$(echo '{ "results" : { "count": 5 } }' | jq -r '.results')"
 - echo $COUNT
