@@ -14,3 +14,6 @@ script:
 - ./script.sh hello world >> output.txt
 - OUTPUT=$(cat output.txt)
 - echo $OUTPUT
+- travis_wait 30 ./script.sh hello wait >> wait.txt
+- WAIT=$(cat wait.txt)
+- echo $wait
