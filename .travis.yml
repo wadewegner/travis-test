@@ -16,4 +16,4 @@ script:
 #- sfdx force:lightning:test:run -a jasmineTests.app
 
 - ./script.sh $INPUT1 $INPUT2
-- echo $?
+- echo $1
