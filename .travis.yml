@@ -10,5 +10,5 @@ script:
 
 after_script:
 
-- WAIT=$(cat wait.txt)
+- WAIT=$(cat output.txt)
 - echo $wait
