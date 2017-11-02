@@ -1,6 +1,5 @@
-# sudo: true
-# dist: trusty
-# cache: false
+sudo: false 
+dist: trusty
 
 script:
 
