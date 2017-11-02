@@ -3,7 +3,7 @@ dist: trusty
 
 script:
 
-- ./script.sh hello world >> output.txt
+- ./script.sh hello world
 - OUTPUT=$(cat output.txt)
 - echo $OUTPUT
 - travis_wait ./script.sh hello wait
