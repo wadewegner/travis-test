@@ -14,5 +14,5 @@ script:
 #- sfdx force:apex:test:run -u packageorg -c -r human
 #- sfdx force:lightning:test:run -a jasmineTests.app
 
-- COUNT=echo '{ "results" : { "count": 5 } }' | jq -r '.results'
+- COUNT='{ "results" : { "count": 5 } }' | jq -r '.results'
 - echo $COUNT
